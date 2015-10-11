@@ -1,4 +1,4 @@
-package temp;
+package src;
 
 public class Player {
 	private String name;
