@@ -57,13 +57,13 @@ public class IntegrationTestGame {
 
 
     @Test
-    public void testPlayRoundDiceListNotModified() {
+    public void testPlayRoundDiceListModified() {
         List<DiceValue> first_list = new ArrayList<DiceValue>
                                      (this.game.getDiceValues());
         this.game.playRound(this.player, this.PLAYER_PICK, this.PLAYER_BET);
         List<DiceValue> second_list = new ArrayList<DiceValue>
                                      (this.game.getDiceValues());
-        assertEquals(first_list, second_list);   
+        assertNotEquals(first_list, second_list);   
     }
 
 }
