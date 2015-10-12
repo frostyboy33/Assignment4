@@ -34,5 +34,12 @@ public class TestPlayer {
     public void testBalanceExceedsLimitByBetEqualsBalance() {
         assertTrue(this.player.balanceExceedsLimitBy(this.PLAYER_BET_AMOUNT));
     }
+    
+    
+    @Test
+    public void testBalanceExceedsLimitBalanceEqualsLimit() {
+        this.player.setLimit(this.PLAYER_BALANCE);
+        assertTrue(this.player.balanceExceedsLimit());
+    }
 
 }
