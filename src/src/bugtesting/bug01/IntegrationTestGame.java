@@ -96,7 +96,7 @@ public class IntegrationTestGame {
         int winnings = this.gameMockDice.playRound(this.player, 
                                                    this.PLAYER_PICK, 
                                                    this.PLAYER_BET);
-        int new_balance = this.PLAYER_BALANCE + winnings;
+        int new_balance = this.PLAYER_BALANCE + this.PLAYER_BET;
         assertEquals(new_balance, this.player.getBalance());
     }
 
