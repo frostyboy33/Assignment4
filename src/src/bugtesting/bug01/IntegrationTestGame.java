@@ -2,11 +2,15 @@ package src.bugtesting.bug01;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import src.Dice;
+import src.DiceValue;
 import src.Game;
 import src.Player;
 
@@ -17,10 +21,14 @@ public class IntegrationTestGame {
     private Dice die3;
     
     private Player player;
-    private final String PLAYER_NAME = "Fred";
-    private final Integer PLAYER_BALANCE = 100;
     
     private Game game;
+    
+    private final String PLAYER_NAME = "Fred";
+    private final Integer PLAYER_BALANCE = 100;
+    private final DiceValue PLAYER_PICK = DiceValue.ANCHOR;
+    private final Integer PLAYER_BET = 5;
+    
 
     @Before
     public void setUp() throws Exception {
@@ -49,15 +57,13 @@ public class IntegrationTestGame {
 
 
     @Test
-    public void testGetDiceValues() {
-        fail("Not yet implemented");
-    }
-
-
-
-    @Test
-    public void testPlayRound() {
-        fail("Not yet implemented");
+    public void testPlayRoundDiceListNotModified() {
+        List<DiceValue> first_list = new ArrayList<DiceValue>
+                                     (this.game.getDiceValues());
+        this.game.playRound(this.player, this.PLAYER_PICK, this.PLAYER_BET);
+        List<DiceValue> second_list = new ArrayList<DiceValue>
+                                     (this.game.getDiceValues());
+        assertEquals(first_list, second_list);   
     }
 
 }
