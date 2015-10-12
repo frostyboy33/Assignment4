@@ -45,6 +45,13 @@ public class TestGame {
 
     @After
     public void tearDown() throws Exception {
+        this.die1 = null;
+        this.die2 = null;
+        this.die3 = null;
+        
+        this.player = null;
+        
+        this.game = null;
     }
 
 
