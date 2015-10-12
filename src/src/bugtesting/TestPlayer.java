@@ -26,22 +26,8 @@ public class TestPlayer {
     public void tearDown() throws Exception {
         this.player = null;
     }
-
-
-
-    @Test
-    public void testPlayer() {
-        fail("Not yet implemented");
-    }
-
-
-
-    @Test
-    public void testGetName() {
-        fail("Not yet implemented");
-    }
-
-
+    
+    
 
     @Test
     public void testGetBalance() {
@@ -49,52 +35,12 @@ public class TestPlayer {
     }
 
 
-
-    @Test
-    public void testGetLimit() {
-        fail("Not yet implemented");
-    }
-
-
-
-    @Test
-    public void testSetLimit() {
-        fail("Not yet implemented");
-    }
-
-
-
-    @Test
-    public void testBalanceExceedsLimit() {
-        fail("Not yet implemented");
-    }
-
-
-
-    @Test
-    public void testBalanceExceedsLimitBy() {
-        fail("Not yet implemented");
-    }
-
-
-
-    @Test
-    public void testTakeBet() {
-        fail("Not yet implemented");
-    }
-
-
-
+    
     @Test
     public void testReceiveWinnings() {
-        fail("Not yet implemented");
+        int winnings = 5;
+        this.player.receiveWinnings(winnings);
+        int new_balance = winnings + this.PLAYER_BALANCE;
+        assertEquals((Integer)new_balance, (Integer)this.player.getBalance());
     }
-
-
-
-    @Test
-    public void testToString() {
-        fail("Not yet implemented");
-    }
-
 }
