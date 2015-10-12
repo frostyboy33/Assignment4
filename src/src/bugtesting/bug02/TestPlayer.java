@@ -13,7 +13,8 @@ public class TestPlayer {
     private Player player;
     
     private final String PLAYER_NAME = "Fred";
-    private final Integer PLAYER_BALANCE = 100;
+    private final Integer PLAYER_BALANCE = 5;
+    private final Integer PLAYER_BET_AMOUNT = 5;
 
     @Before
     public void setUp() throws Exception {
@@ -30,8 +31,8 @@ public class TestPlayer {
 
 
     @Test
-    public void testBalanceExceedsLimitBy() {
-        
+    public void testBalanceExceedsLimitByBetEqualsBalance() {
+        assertTrue(this.player.balanceExceedsLimitBy(this.PLAYER_BET_AMOUNT));
     }
 
 }
