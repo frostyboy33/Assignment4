@@ -23,6 +23,7 @@ public class TestGame {
     
     private final DiceValue PLAYER_PICK = DiceValue.ANCHOR;
     private final Integer PLAYER_BET = 5;
+    private final Integer EXPECTED_WINNINGS = 10;
 
     @Before
     public void setUp() throws Exception {
@@ -61,7 +62,7 @@ public class TestGame {
         int winings = this.game.playRound(this.player, 
                                           this.PLAYER_PICK,
                                           this.PLAYER_BET);
-        assertEquals(this.PLAYER_BET, (Integer)winings);
+        assertEquals(this.EXPECTED_WINNINGS, (Integer)winings);
     }
     
     @Test
