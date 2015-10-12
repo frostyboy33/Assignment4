@@ -63,5 +63,15 @@ public class TestGame {
                                           this.PLAYER_BET);
         assertEquals(this.PLAYER_BET, (Integer)winings);
     }
+    
+    @Test
+    public void testPlayRoundVerifyRoll(){
+        int winings = this.game.playRound(this.player, 
+                                          this.PLAYER_PICK,
+                                          this.PLAYER_BET);
+        Mockito.verify(this.die1).roll();
+        Mockito.verify(this.die2).roll();
+        Mockito.verify(this.die3).roll();      
+    }
 
 }
