@@ -58,11 +58,11 @@ public class TestGame {
 
 
     @Test
-    public void testPlayRound() {
-        int winings = this.game.playRound(this.player, 
+    public void testPlayRoundCorrectWinnings() {
+        int winnings = this.game.playRound(this.player, 
                                           this.PLAYER_PICK,
                                           this.PLAYER_BET);
-        assertEquals(this.EXPECTED_WINNINGS, (Integer)winings);
+        assertEquals(this.EXPECTED_WINNINGS, (Integer)winnings);
     }
     
     @Test
