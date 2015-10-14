@@ -22,37 +22,34 @@ public class TestDiveValue {
     public void tearDown() throws Exception {
     }
 
-
-    CROWN, ANCHOR, HEART, DIAMOND, CLUB, SPADE
     @Test
     public void testGetRandomGetCrown() {
-        fail("Not yet implemented");
+        assertTrue(this.canProduceValue(DiceValue.CROWN));
     }
-    
-    
+       
     @Test
     public void testGetRandomGetAnchor() {
-        fail("Not yet implemented");
+        assertTrue(this.canProduceValue(DiceValue.ANCHOR));
     }
     
     @Test
     public void testGetRandomGetHeart() {
-        fail("Not yet implemented");
+        assertTrue(this.canProduceValue(DiceValue.HEART));
     }
     
     @Test
     public void testGetRandomGetDiamond() {
-        fail("Not yet implemented");
+        assertTrue(this.canProduceValue(DiceValue.DIAMOND));
     }
     
     @Test
     public void testGetRandomGetClub() {
-        fail("Not yet implemented");
+        assertTrue(this.canProduceValue(DiceValue.CLUB));
     }
     
     @Test
     public void testGetRandomGetSpade() {
-        fail("Not yet implemented");
+        assertTrue(this.canProduceValue(DiceValue.SPADE));
     }
     
     private boolean canProduceValue(DiceValue value) {
