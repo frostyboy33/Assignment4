@@ -63,5 +63,10 @@ public class TestDiveValue {
         }
         return found;
     }
+    
+    @Test
+    public void testSpadeOrdinalEqualsFive(){
+        assertEquals(5,DiceValue.SPADE.ordinal());
+    }
 
 }
