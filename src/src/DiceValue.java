@@ -8,6 +8,8 @@ public enum DiceValue {
 	
 	private static Random RANDOM = new Random();
 	
+	private final static int size = values().length;
+	
 	private static final Map<DiceValue, String> VALUE_REPR_MAP= new HashMap<DiceValue, String>();
 	static {
 		VALUE_REPR_MAP.put(DiceValue.CROWN, "Crown");
@@ -23,7 +25,7 @@ public enum DiceValue {
 	}
 	
 	public static DiceValue getRandom() {
-		int random = RANDOM.nextInt(DiceValue.SPADE.ordinal() + 1);
+		int random = RANDOM.nextInt(size);
 		return values()[random];
 	}
 	
