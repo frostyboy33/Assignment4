@@ -8,7 +8,7 @@ public enum DiceValue {
 	
 	private static Random RANDOM = new Random();
 	
-	private final static int size = values().length;
+	private final static int SIZE = values().length;
 	
 	private static final Map<DiceValue, String> VALUE_REPR_MAP= new HashMap<DiceValue, String>();
 	static {
@@ -25,7 +25,7 @@ public enum DiceValue {
 	}
 	
 	public static DiceValue getRandom() {
-		int random = RANDOM.nextInt(size);
+		int random = RANDOM.nextInt(SIZE);
 		return values()[random];
 	}
 	
