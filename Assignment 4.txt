@@ -1,0 +1,5 @@
+URL to REPO https://github.com/frostyboy33/Assignment4/tree/working
+
+All Source code is in the /src/src folder
+All bug tests are in the /src/src/bugtesting/bug0{1,2,3} folders
+ALL Debug logs and UAT tests developed are in the /UAT folder each file is named appropriately for each bug
